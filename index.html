@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Main To Do List</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- custom styles -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="text-center">
+          <h1 class="text-center"></h1>
+          <hr>
+          <form class="text-center" id="book-list">
+            <div class="form-group">
+              <input class="form-control" id="-name" placeholder="What will you do tomorrow?" autofocus>
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="-desc" placeholder="Add task details">
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-success" value="Add task!">
+            </div>
+          </form>
+          <hr>
+          <ul id="-list"></ul>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="script.js"></script>
+
+   <!-- underscore template -->
+  <script type="text/template" id="task-template">
+    <div class="task">
+      <p>
+        <%= name %> - <%= desc %>
+      </p>
+      <hr>
+    </div>
+  </script>
+
+  <!-- underscore -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+</body>
+</html>
